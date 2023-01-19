@@ -1,0 +1,13 @@
+low=int(input("lower limit:"))
+high=int(input("higher limit:"))
+
+def check_prime(x):
+    count=0
+    for i in range(2,x):
+        if x%i==0:
+            count+=1
+    if count==0:
+        print(x)
+
+for j in range(low,high+1):
+    check_prime(j)
