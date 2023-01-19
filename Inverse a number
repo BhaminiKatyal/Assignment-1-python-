@@ -1,0 +1,12 @@
+n=input("number = ")
+l=list(n)
+l.reverse()
+lenl=len(l)    
+newl=list()
+for i in range(1,lenl+1):
+    s=str(i)
+    find=l.index(s)
+    newl.append(find+1)
+newl.reverse()
+for j in newl:
+    print(j,end="")
