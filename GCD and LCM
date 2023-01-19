@@ -1,0 +1,29 @@
+def prime_fac(l,n):
+    l=list()
+    for i in range(2,n+1):
+        while n%i==0:
+            l.append(i)
+            n=n/i
+    return l
+num1=int(input("number 1:"))
+num2=int(input("number 2:"))
+l1=list()
+l2=list()
+l1=prime_fac(l1,num1)
+l2=prime_fac(l2,num2)
+
+gcd=1
+for i in l1:
+    if i in l2:
+        gcd*=i
+print(gcd,"is the GCD")
+
+lcm=1
+for i in l1:
+    lcm*=i
+for j in l2:
+    if j in l1:
+        pass
+    else:
+        lcm*=j
+print(lcm,"is the LCM")
