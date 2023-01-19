@@ -1,0 +1,40 @@
+n=int(input("enter n:"))
+k=int(input("enter k:"))
+sn=str(n)
+snl=len(sn)
+if k==0:
+    print(n)
+elif k>0:
+    if k>snl:
+        k=k-snl
+    h=str(n%(10**k))
+    h=list(h)
+    rn=str(int(n/(10**k)))
+    rn=list(rn)
+    h.extend(rn)
+    l=len(h)
+    for i in range(l):
+        if h[0]=="0":
+            z=h.pop(0)
+        else:
+            break
+    for i in h:
+        print(i,end='')
+elif k<0:
+    if k*(-1)>snl:
+        k=k+snl
+    negl=[i for i in sn]
+    nnl=[]
+    while k<0:
+        j=negl.pop(0)
+        nnl.append(j)
+        k+=1
+    negl.extend(nnl)
+    lnegl=len(negl)
+    for a in range(lnegl):
+        if negl[0]=="0":
+            z=negl.pop(0)
+        else:
+            break
+    for b in negl:
+        print(b,end="")
