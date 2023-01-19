@@ -1,0 +1,6 @@
+n=int(input("enter no:"))
+d=0
+while n>0:
+    n=int(n/10)
+    d+=1
+print("no. of digits =",d)
